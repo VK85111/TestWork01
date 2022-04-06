@@ -1,10 +1,26 @@
-﻿using System;
+using System;
 using FiguresList;
 
 namespace Calculation
 {
     public class Calculator
     {
+        public double Calc(Figures obj)
+        {
+            double reslt = 0; 
+            if (obj is Circle)
+            {
+                reslt = CircleCalc(obj as Circle);
+            }
+            else if (obj is Triangle)
+            {
+                reslt = TriangleCalc(obj as Triangle);
+            }
+
+            return reslt;
+
+        }
+
         public double CircleCalc(Circle circl)
         {
             return 3.1415926535897931 * Math.Pow(circl.radius, 2);
