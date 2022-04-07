@@ -23,7 +23,7 @@ namespace Calculation
 
         public double CircleCalc(Circle circl)
         {
-            return 3.1415926535897931 * Math.Pow(circl.radius, 2);
+            return Math.PI * Math.Pow(circl.radius, 2);
         }
 
         public double TriangleCalc(Triangle triangl)
